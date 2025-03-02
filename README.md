@@ -43,7 +43,7 @@ Now the redis exporter is showing as a target in Prometheus:
 
 ![redis-target](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/redis-target.png)
 
-Now there are a bunch of metrics being exposed to Prometheus to scrape through the Redis exporter
+Now there are a bunch of metrics being exposed to Prometheus to scrape through with help of the Redis exporter
 
 ![redis-metrics1](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/redis-metrics1.png)
 
