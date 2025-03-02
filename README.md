@@ -4,7 +4,7 @@
 
 In this project, I set up comprehensive monitoring for Redis running in a Kubernetes cluster using the Prometheus monitoring stack. The solution provides real-time metrics visualization and automated alerting when Redis experiences issues.
 
-![diagram](https://github.com/Princeton45//blob/main/images/diagram.png)
+![diagram](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/diagram.png)
 
 ## Technologies Used
 
@@ -37,15 +37,15 @@ redisAddress: redis://redis-cart:6379
 
 `helm install redis-exporter prometheus-community/prometheus-redis-exporter -f .\redis-values.yaml`
 
-![redis-exporter](https://github.com/Princeton45//blob/main/images/redis-exporter.png)
+![redis-exporter](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/redis-exporter.png)
 
 Now the redis exporter is showing as a target in Prometheus:
 
-![redis-target](https://github.com/Princeton45//blob/main/images/redis-target.png)
+![redis-target](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/redis-target.png)
 
 Now there are a bunch of metrics being exposed to Prometheus to scrape through the Redis exporter
 
-![redis-metrics1](https://github.com/Princeton45//blob/main/images/redis-metrics1.png)
+![redis-metrics1](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/redis-metrics1.png)
 
 
 ### 2. Creating Alert Rules for Redis
@@ -55,8 +55,8 @@ I created 2 different alert rules for Redis:
 1) Alert when Redis is down. 
 2) Whether the Redis application has too many connections at once.
 
-![redis-rules1](https://github.com/Princeton45//blob/main/images/redis-rules1.png)
+![redis-rules1](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/redis-rules1.png)
 
-![redis-rules2](https://github.com/Princeton45//blob/main/images/redis-rules2.png)
+![redis-rules2](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/redis-rules2.png)
 
 
