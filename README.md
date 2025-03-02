@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-In this project, I set up comprehensive monitoring for a Redis instance using Prometheus and Grafana in a Kubernetes environment. I configured alerts for downtime and connection overload while creating visual dashboards for real-time monitoring.
+In this project, I set up comprehensive monitoring for Redis running in a Kubernetes cluster using the Prometheus monitoring stack. The solution provides real-time metrics visualization and automated alerting when Redis experiences issues.
+
+![diagram](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/diagram.png)
 
 ## Technologies Used
 
