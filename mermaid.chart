@@ -1,0 +1,38 @@
+graph TD
+    subgraph Kubernetes Cluster
+        subgraph "Monitoring Stack"
+            A[Prometheus] --> B[AlertManager]
+            A --> C[Grafana]
+            D[Redis Exporter] --> A
+        end
+
+        subgraph "Redis Deployment"
+            E[Redis Service]
+            D -->|scrapes metrics| E
+        end
+
+        B -->|sends alerts| F[Email Notification]
+        C -->|visualizes| G[Redis Dashboard]
+    end
+
+    subgraph "Configuration"
+        H[Helm Chart] -->|installs| D
+        I[AlertmanagerConfig CRD] -->|configures| B
+        J[PrometheusRule CRD] -->|defines| K[Alert Rules]
+        K -->|triggers| B
+        L[Grafana Dashboard JSON] -->|imported to| C
+    end
+
+    A -->|monitors| K
+    M[Helm] -->|deploys| E
+    M -->|deploys| H
+
+    classDef monitoring fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef redis fill:#ff9,stroke:#333,stroke-width:2px;
+    classDef config fill:#9cf,stroke:#333,stroke-width:2px;
+    classDef tools fill:#cfc,stroke:#333,stroke-width:2px;
+
+    class A,B,C,D monitoring;
+    class E redis;
+    class H,I,J,K,L config;
+    class M tools;
