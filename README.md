@@ -59,4 +59,11 @@ I created 2 different alert rules for Redis:
 
 ![redis-rules2](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/redis-rules2.png)
 
+### 3. Import Redis Dashboard in Grafana
+
+I utilized the `Redis Dashboard for Prometheus Redis Exporter` and imported it into Grafana to better visualize what is happening when we receive alerts and seeing more information for analyzing.
+
+![dashboard](https://github.com/Princeton45/monitor-3rd-party-app/blob/main/images/dashboard.png)
+
+
 
